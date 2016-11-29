@@ -1,17 +1,19 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('bodyParser');
-const mongoose = require('mongoose');
-const bluebird = require('bluebird');
+const bodyParser = require('body-parser');
 const routes = require('./server/routes');
-mongoose.Promise = bluebird;
-
-mongoose.connect('mongodb://localhost:27017/assessment');
+const cors = require('cors');
 
 app.use(cors())
+
+//Parse the content in the body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 
+//Pass app to the routes
 routes(app);
 
-module.exports(app);
+app.listen(3000);
+console.log('App is listening on port 3000.')
+
+module.exports = app;
