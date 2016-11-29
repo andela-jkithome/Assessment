@@ -2,8 +2,10 @@ const request = require('superagent');
 
 module.exports = {
   fetch: function (req, res) {
+    console.log(req.body);
     request
      .get('https://api.github.com/users/' + req.body.username +'/events')
+     .auth('jeremy.kithome@andela.com', 'jeregith1', {type:'auto'})
      .set('Accept', 'application/json')
      .end(function(err, response){
         if (err) {
