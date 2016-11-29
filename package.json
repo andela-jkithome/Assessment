@@ -1,0 +1,29 @@
+{
+  "name": "assessment",
+  "version": "1.0.0",
+  "description": "'An app to consume github api'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-jkithome/Assessment.git"
+  },
+  "author": "jeremy kithome",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-jkithome/Assessment/issues"
+  },
+  "homepage": "https://github.com/andela-jkithome/Assessment#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "http-server": "^0.9.0",
+    "jasmine": "^2.5.2",
+    "mongoose": "^4.7.0",
+    "superagent": "^3.1.0"
+  }
+}
