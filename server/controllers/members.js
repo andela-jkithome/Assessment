@@ -5,7 +5,7 @@ module.exports = {
     // console.log('Request made it thus far.')
     request
      .get('https://api.github.com/orgs/andela/members')
-     .auth('jeremy.kithome@andela.com', 'jeregith1', {type:'auto'})
+     .auth('username', 'password', {type:'auto'})
      .set('Accept', 'application/json')
      .end(function(err, response){
         if (err) {

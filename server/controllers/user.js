@@ -5,7 +5,7 @@ module.exports = {
     console.log(req.body);
     request
      .get('https://api.github.com/users/' + req.body.username +'/events')
-     .auth('jeremy.kithome@andela.com', 'jeregith1', {type:'auto'})
+     .auth('username', 'password', {type:'auto'})
      .set('Accept', 'application/json')
      .end(function(err, response){
         if (err) {
