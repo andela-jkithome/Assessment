@@ -1,0 +1,21 @@
+const request = require('superagent');
+
+module.exports = {
+  fetch: function (req, res) {
+    // console.log('Request made it thus far.')
+    request
+     .get('https://api.github.com/orgs/andela/members')
+     .set('Accept', 'application/json')
+     .end(function(err, response){
+        if (err) {
+          res.send({error: 'There was an error'})
+        } else {
+          var users;
+          users = response.body.map((user) => {
+            return user.login;
+          })
+          res.send(users);
+        }
+     })
+  }
+}
